@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
 export const ProfileDiv = styled.div`
-  width: 500px;
+  width: 800px;
   margin: 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #f8f8f8;
-  border-radius: 16px;
+  background-color: #DFDFDF;
+  border-radius: 15px;
 `;
 
 export const ProfileImg = styled.img`
-  width: 240px;
+  width: 350px;
   border-radius: 50%;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -38,7 +38,7 @@ export const ProfileLocation = styled.p`
   margin-bottom: 26px;
   font-size: 16px;
   font-weight: 600;
-  color: #0505057e;
+  color: #363697;
 `;
 
 export const ProfileStats = styled.ul`
