@@ -10,20 +10,23 @@ export const List = styled.ul`
   border-radius: 10px;
 `;
 
-export const FriendItem = styled.li`
+export const ListItem = styled.li`
   display: flex;
+  text-align: center;
+  background: white;
   align-items: 'center';
   flex-direction: column;
   padding: 10px;
-  text-align: center;
   cursor: pointer;
 `;
 
+export const FriendName = styled.p``;
+
 export const FriendImg = styled.img``;
 
-export const Status = styled.span`
+export const FriendStatus = styled.span`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: ${props => (props.$isOnline ? 'green' : 'red')};
+  background-color: ${props => (props.children ? 'green' : 'red')};
 `;

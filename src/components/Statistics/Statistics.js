@@ -5,11 +5,7 @@ import {
   StatsLabel,
 } from './Statistics.styled';
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
+import { getRandomHexColor } from '../Utils/RandomColors';
 
 export const Statistics = ({ title, stats }) => {
   const combinedStats = stats.reduce((acc, curr) => {

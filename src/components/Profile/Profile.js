@@ -19,6 +19,7 @@ export const Profile = ({ user }) => {
     avatar,
     stats: { followers, views, likes },
   } = user;
+
   return (
     <ProfileDiv>
       <ProfileDescr>
@@ -45,3 +46,16 @@ export const Profile = ({ user }) => {
     </ProfileDiv>
   );
 };
+
+
+// Profile.propTypes = {
+//   username: PropTypes.string.isRequired,
+//   tag: PropTypes.string.isRequired,
+//   location: PropTypes.string.isRequired,
+//   avatar: PropTypes.string.isRequired,
+//   stats: PropTypes.exact({
+//     followers: PropTypes.number.isRequired,
+//     views: PropTypes.number.isRequired,
+//     likes: PropTypes.number.isRequired,
+//   }).isRequired,
+// };

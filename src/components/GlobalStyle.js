@@ -3,9 +3,6 @@ import 'modern-normalize';
 
 export const GlobalStyle = createGlobalStyle`
 
-
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 
@@ -32,8 +29,6 @@ p {
 ul, ol, li {
   list-style: none;
 }
-
-
 
 img {
     display: block;
