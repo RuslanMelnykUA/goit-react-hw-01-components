@@ -21,7 +21,6 @@ export const ListItem = styled.li`
 `;
 
 export const FriendName = styled.p``;
-
 export const FriendImg = styled.img``;
 
 export const FriendStatus = styled.span`
