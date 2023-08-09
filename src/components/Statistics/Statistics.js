@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   StatsSection,
   StatsItem,
@@ -7,22 +8,12 @@ import {
 
 import { getRandomHexColor } from '../Utils/RandomColors';
 
-export const Statistics = ({ title, stats }) => {
-  const combinedStats = stats.reduce((acc, curr) => {
-    const existingItem = acc.find(item => item.label === curr.label);
-    if (existingItem) {
-      existingItem.percentage += curr.percentage;
-    } else {
-      acc.push({ ...curr });
-    }
-    return acc;
-  }, []);
-
+export const Statistics = ({ title, stats }) => {  
   return (
     <StatsSection>
       {title && <h2>{title}</h2>}
       <StatsList>
-        {combinedStats.map(item => (
+        {stats.map(item => (
           <StatsItem key={item.id} color={getRandomHexColor()}>
             <StatsLabel>{item.label}</StatsLabel>
             <span>{item.percentage} %</span>
@@ -31,4 +22,15 @@ export const Statistics = ({ title, stats }) => {
       </StatsList>
     </StatsSection>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };

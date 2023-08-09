@@ -1,9 +1,12 @@
+import PropTypes from 'prop-types';
+
 import {
   TransactionTable,
   TransactionTr,
   TransitionTd,
   HeaderTr,
 } from './TransactionHistory.styled';
+
 export const TransactionHistory = ({ transData }) => {
   return (
     <TransactionTable>
@@ -29,4 +32,15 @@ export const TransactionHistory = ({ transData }) => {
       </tbody>
     </TransactionTable>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 };
